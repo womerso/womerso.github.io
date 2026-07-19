@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Felipa&family=Fleur+De+Leah&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Smooch+Sans:wght@100..900&display=swap" rel="stylesheet">
+    </head>
+    <style>
+        @import url('https://googleapis.com');
+        * {
+            margin-top: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+    
+        .landing
+        {
+            margin: 0;
+            max-width: 100%;
+            height: auto;
+            height: 100vh;
+            display: block;
+            margin-top: 0;
+            background-image: url('./woods-landing.jpg');
+            background-position: center;
+            background-size: cover;
+            transition: cubic-bezier(0.075, 0.82, 0.165, 1) ;
+            mask-image: linear-gradient(to bottom, black 90%, transparent 100%);
+            /* Required webkit prefix for full browser support */
+            -webkit-mask-image: linear-gradient(to bottom, black 90%, transparent 100%); 
+
+        }
+        .floating {
+            display: grid;
+            margin:10%;
+            background-color: whitesmoke;
+            width: 80%;
+            height: 100vh;
+            justify-content: center;
+            align-content: center;
+        }
+        .paper-box
+        {
+            
+        }
+        .hero_text
+        {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            height: 100%;
+            /* top: 25%;
+            bottom: 75%; */
+            
+            justify-content: center;
+        }
+        .text_center
+        {
+       
+            font-size: 60pt;
+            color: whitesmoke;
+            justify-content: center;
+                font-family: 'Fleur De Leah', cursive;
+
+        }
+        .luxurious-roman-regular {
+            font-family: "PT Serif", serif;
+            font-weight: 100;
+            height: 1px;
+            /* font-size: 40pt; */
+            font-style: regular;
+            }
+        h3
+        {
+            font-size: 30pt !important;
+        }
+        h5{
+            font-size: 15pt !important;
+        }
+        
+
+    </style>
+    
+    <body style="background-image: url('background-watercolor.jpg'); ">
+        <div class="landing">
+            <div class="hero_text">
+
+                <h1 class="text_center">Wesley      & Alexandria</h1>
+                <h3 class="text_center luxurious-roman-regular">May 21, 2027</h3>
+                <h5 class="text_center luxurious-roman-regular">Bernheim Forest, KY  </h5>
+            </div>
+        </div>
+        <div class="floating">
+            <div class="paper-box">
+                <h2>Celebrate With Us</h2>
+            </div>
+        </div>
+        <div class="floating">
+            <h2>lol</h2>
+        </div>
+    </body>
+</html>
