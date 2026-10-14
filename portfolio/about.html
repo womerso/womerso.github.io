@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About | Your Name</title>
+  <meta name="description" content="About Your Name: computer science student, education, experience and interests.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=JetBrains+Mono:wght@500&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <nav class="navbar navbar-expand-md site-nav sticky-top" aria-label="Main">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <span class="brand-mark" aria-hidden="true">{ }</span>Your Name
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto gap-md-1">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html" aria-current="page">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
+        </ul>
+        <a class="btn btn-primary btn-sm ms-md-3 mt-2 mt-md-0" href="mailto:you@example.com">Contact me</a>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main">
+    <header class="page-head gridpaper">
+      <div class="container">
+        <h1>About me</h1>
+        <p>A little about who I am, what I study and what I like to build.</p>
+      </div>
+    </header>
+
+    <!-- BIO -->
+    <section class="section" aria-label="Biography">
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-lg-4">
+            <!-- EDIT: replace the initials with your photo:
+                 <div class="portrait"><img src="assets/photo.jpg" alt="Photo of Your Name"></div> -->
+            <div class="portrait" role="img" aria-label="Placeholder for a portrait photo">YN</div>
+
+            <dl class="facts">
+              <dt>School</dt>
+              <dd>Your University</dd>
+              <dt>Degree</dt>
+              <dd>B.S. in Computer Science</dd>
+              <dt>Graduating</dt>
+              <dd>Month 20XX</dd>
+              <dt>Location</dt>
+              <dd>City, State</dd>
+            </dl>
+            <!-- EDIT: add your resume PDF to the assets folder and link it here -->
+            <a class="btn btn-outline-dark" href="#">Download my resume</a>
+          </div>
+
+          <div class="col-lg-8 bio">
+            <h2 class="section-title mb-4">Hi, I'm Your Name</h2>
+            <p>Write two or three short paragraphs here. Start with what you study and what drew you to computer science.</p>
+            <p>Then describe the kinds of problems you like solving, such as making slow code faster, turning messy data into answers, or building tools other students actually use.</p>
+            <p>Finish with what you are looking for next, whether that is an internship, research or a team to learn from. Keep it conversational and specific.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION + EXPERIENCE -->
+    <section class="section pt-0" aria-label="Education and experience">
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-lg-6">
+            <h2 class="section-title mb-4">Education</h2>
+            <ol class="timeline">
+              <li>
+                <p class="timeline-date">Aug 20XX to May 20XX</p>
+                <h3>B.S. in Computer Science</h3>
+                <p class="timeline-org">Your University</p>
+                <p>Add your GPA, honors, minor or the coursework you are proudest of.</p>
+              </li>
+              <li>
+                <p class="timeline-date">20XX</p>
+                <h3>Certificate or program name</h3>
+                <p class="timeline-org">Issuing organization</p>
+                <p>Optional. Add bootcamps, online courses or certifications that support your projects.</p>
+              </li>
+            </ol>
+          </div>
+
+          <div class="col-lg-6">
+            <h2 class="section-title mb-4">Experience</h2>
+            <ol class="timeline">
+              <li>
+                <p class="timeline-date">Summer 20XX</p>
+                <h3>Software engineering intern</h3>
+                <p class="timeline-org">Company Name</p>
+                <p>Describe what you built and the result, ideally with a number: faster, cheaper, more users.</p>
+              </li>
+              <li>
+                <p class="timeline-date">Aug 20XX to present</p>
+                <h3>Teaching assistant</h3>
+                <p class="timeline-org">Course name, Your University</p>
+                <p>Mention how many students you supported and what you helped them learn.</p>
+              </li>
+              <li>
+                <p class="timeline-date">20XX</p>
+                <h3>Hackathon or club leadership</h3>
+                <p class="timeline-org">Organization or event</p>
+                <p>Add clubs, hackathons and open-source work, and say what your role was.</p>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BEYOND CODE -->
+    <section class="section pt-0" aria-labelledby="beyond-title">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 bio">
+            <h2 id="beyond-title" class="section-title mb-4">Beyond code</h2>
+            <p>Share a few things you do away from the keyboard. Hobbies make you easier to remember and give interviewers something to ask about.</p>
+            <ul class="tag-list">
+              <li class="tag">Hobby one</li>
+              <li class="tag">Hobby two</li>
+              <li class="tag">Hobby three</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-band section" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="row align-items-center gy-4">
+          <div class="col-lg-8">
+            <h2 id="contact-title" class="section-title">Want to work together?</h2>
+            <p>Say what you are looking for: an internship, a research position, an open-source collaboration or a project idea. Then tell people the best way to reach you.</p>
+          </div>
+          <div class="col-lg-4 d-flex flex-wrap gap-2 justify-content-lg-end">
+            <a class="btn btn-sun" href="mailto:you@example.com">Email me</a>
+            <a class="btn btn-outline-light" href="https://github.com/your-username" rel="noopener">GitHub</a>
+            <a class="btn btn-outline-light" href="https://www.linkedin.com/in/your-username" rel="noopener">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container d-flex flex-wrap justify-content-between gap-2">
+      <span>&copy; <span data-year>2026</span> Your Name. Built with Bootstrap.</span>
+      <a class="text-link" href="#top">Back to top</a>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
