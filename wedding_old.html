@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Felipa&family=Fleur+De+Leah&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Smooch+Sans:wght@100..900&display=swap" rel="stylesheet">
+    </head>
+    <style>
+        @import url('https://googleapis.com');
+        * {
+            margin-top: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+    
+        .landing {
+            margin: 0;
+            max-width: 100%;
+            height: 100vh;
+            display: block;
+            background-image: url('./woods-landing.jpg');
+            background-position: center;
+            background-size: cover;
+            transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+            mask-image: linear-gradient(to bottom, black 90%, transparent 100%);
+            -webkit-mask-image: linear-gradient(to bottom, black 90%, transparent 100%); 
+        }
+        p {
+            text-align: center;
+        }
+        ul {
+            text-align: center;
+        }
+        li {
+            margin-left: 10%;
+        }
+        .floating {
+            display: block;
+            margin: 5% auto 3rem auto;
+            padding: 40px 20px;
+            background-color: whitesmoke;
+            width: 80%;
+            min-height: 100vh;
+            height: auto;
+        }
+    
+        .hero_text {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            height: 100%;
+            justify-content: center;
+        }
+
+        .text_center {
+            font-size: 60pt;
+            color: whitesmoke;
+            justify-content: center;
+            font-family: 'Fleur De Leah', cursive;
+        }
+
+        .luxurious-roman-regular {
+            font-family: "PT Serif", serif;
+            font-weight: 100;
+            height: 1px;
+            font-style: regular;
+        }
+
+        h3 {
+            font-size: 30pt !important;
+        }
+
+        h5 {
+            font-size: 15pt !important;
+        }
+
+        /* Paper Box Container */
+        .paper-box {
+            position: relative;
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* Set a background color */
+        body {
+            background-color: #474e5d;
+            font-family: "PT Serif", serif;
+        }
+
+        /* The actual timeline container */
+        .timeline {
+            position: relative;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        /* The vine background line */
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            background-repeat: repeat-y;
+            background-image: url('./vine_loop.png');
+            background-position: center;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+            transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+            mask-image: linear-gradient(to bottom, black 90%, transparent 100%);
+            -webkit-mask-image: linear-gradient(to bottom, black 90%, transparent 100%); 
+            mask-image: linear-gradient(to top, black 90%, transparent 100%);
+            -webkit-mask-image: linear-gradient(to top, black 90%, transparent 100%);
+        }
+
+        /* Container around content */
+        .container {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+            z-index: 2;
+        }
+
+        /* Place the container to the left */
+        .left {
+            left: 0;
+        }
+
+        /* Place the container to the right */
+        .right {
+            left: 50%;
+        }
+
+        /* Add arrows to the left container (pointing right) */
+        .left::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            right: 30px;
+            border: medium solid white;
+            border-width: 10px 0 10px 10px;
+            border-color: transparent transparent transparent white;
+        }
+
+        /* Add arrows to the right container (pointing left) */
+        .right::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            left: 30px;
+            border: medium solid white;
+            border-width: 10px 10px 10px 0;
+            border-color: transparent white transparent transparent;
+        }
+
+        /* The actual content */
+        .content {
+            padding: 20px 30px;
+            background-color: white;
+            position: relative;
+            border-radius: 6px;
+        }
+
+        /* Responsive behavior for mobile screens */
+        @media screen and (max-width: 600px) {
+            .timeline::after {
+                left: 31px;
+                transform: none;
+            }
+
+            .container {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+
+            .left, .right {
+                left: 0;
+            }
+
+            .container::before {
+                left: 60px;
+                border: medium solid white;
+                border-width: 10px 10px 10px 0;
+                border-color: transparent white transparent transparent;
+            }
+        }
+    </style>
+    
+    <body style="background-image: url('background-watercolor.jpg');">
+        <div class="landing">
+            <div class="hero_text">
+                <h1 class="text_center">Wesley & Alexandria</h1>
+                <h3 class="text_center luxurious-roman-regular">May 21, 2027</h3>
+                <h5 class="text_center luxurious-roman-regular">Bernheim Forest, KY</h5>
+            </div>
+        </div>
+        <div class="floating">
+            <div class="paper-box">
+                <div class="timeline">
+                    <div class="container left">
+                        <div class="content">
+                            <h2>April 2021</h2>
+                            <p><i>A showmance for the ages... </i>Alexandria falls for Wesley and his leather jacket in Grease</p>
+                        </div>
+                    </div>
+                    <div class="container right">
+                        <div class="content">
+                            <h2>Summer 2021</h2>
+                            <p><i>This one time at band camp...</i> Wesley realizes that Alexandria is maybe the coolest person ever and develops a crush.</p>
+                        </div>
+                    </div>
+                    <div class="container left">
+                        <div class="content">
+                            <h2>October 2, 2021</h2>
+                            <p>The <b>OFFICIAL</b> Wesley Fan Club begins. For some reason this does not scare Alexandria off.</p>
+                        </div>
+                    </div>
+                    <div class="container right">
+                        <div class="content">
+                            <h2>October 11, 2021</h2>
+                            <p><i>Do you wanna go corn?</i> Wesley and Alexandria's First Date: picking apples (the red ones and pink ladies) at Huber's Orchard.</p>
+                        </div>
+                    </div>
+                    <div class="container left">
+                        <div class="content">
+                            <h2>October 21, 2021</h2>
+                            <p><img src="./the_question.jpg" style="max-width:100%; max-height: 110%;"/></p>
+                        </div>
+                    </div>
+                    <div class="container right">
+                        <div class="content">
+                            <h2>November 3, 2021</h2>
+                            <p><img src="./the_l_word.png" style="max-width:100%; max-height: 110%;"/></p>
+                        </div>
+                    </div>
+                    
+                    <div class="container left">
+                        <div class="content">
+                            <h2>Thanksgiving 2021</h2>
+                            <p><i>The very first kiss..</i> was so great that Wesley fell over on her porch.</p>
+                        </div>
+                    </div>
+                    <div class="container right">
+                        <div class="content">
+                            <h2>Summer 2022</h2>
+                            <p><i>Our last summer...</i> before long distance. Wesley and Alexandria made every second count before they were RUDELY ripped away from each other so she could go to school or whatever.</p>
+                        </div>
+                    </div>
+                    <div class="container left">
+                        <div class="content">
+                            <h2>August 21, 2022</h2>
+                            <p><i>The beginning of the rest of our lives...</i> Alexandria starts college at the University of Kentucky. Wesley misses her.</p>
+                        </div>
+                    </div>
+                    <div class="container right">
+                        <div class="content">
+                            <h2>Spring 2023</h2>
+                            <p><i>The summer away...</i> Wesley graduates and then is gone in Europe and the Bahamas for most of the summer. Ally misses him.</p>
+                        </div>
+                    </div>
+                    <div class="container left">
+                        <div class="content">
+                            <h2>Fall 2023</h2>
+                            <p><i>Even further now...</i> Wesley starts school at the University of Notre Dame. They are now 5.5hrs apart from each other. This sucks. They both miss each other.</p>
+                        </div>
+                    </div>
+                    <div class="container right">
+                        <div class="content">
+                            <h2>Summer 2024</h2>
+                            <p><i>Mornings with you... </i> made Wesley very sleepy, but Alexandria's new job meant that he would take her to work each morning at <s>The buttcrack of dawn</s> 7:00 am.</p>
+                        </div>
+                    </div>
+                    <div class="container left">
+                        <div class="content">
+                            <h2>Fall 2024</h2>
+                            <p><i>Seriously who's idea was this??? </i> Wesley and Alexandria are back to school and back to being oh so very far :( They call every day. It still sucks.</p>
+                        </div>
+                    </div>
+                    <div class="container right">
+                        <div class="content">
+                            <h2>Valentines 2025</h2>
+                            <p><i>Disaster ensues... </i> Wesley visits Alexandria for Valentine's day. His car breaks down twice in one weekend. He is stranded in the snow with an assignment due the next day. Wesley needs a new car.</p>
+                        </div>
+                    </div>
+                    <div class="container left">
+                        <div class="content">
+                            <h2>June 21, 2025</h2>
+                            <p><i>I do... </i> after a night of really bad sleep on Wesley's couch, Wesley and Alexandria go hiking in frankly too hot weather. Wesley nearly leaps off a cliff in excitement - and proposes to Alexandria. She says yes (booyah). More importantly, Alexandria discovers Orange Cream Ale8.</p>
+                        </div>
+                    </div>
+                    <div class="container right">
+                        <div class="content">
+                            <h2>Summer 2025</h2>
+                            <p><i>A fricken awesome summer... </i> finally engaged, Wesley and Alexandria have a lovely summer together on a budget. Wesley's car breaks down 5 more times. Wesley gets a new car! Alexandria will be visited more often now >:)</p>
+                        </div>
+                    </div>
+                    <div class="container left">
+                        <div class="content">
+                            <h2>Fall 2025</h2>
+                            <p><i>One more year... </i> for Alexandria who is balling it out in Lexington, getting all sorts of awards and recognition for being an awesome writer. Wesley is also back at school. It still sucks but now they've got rings on their fingers!</p>
+                        </div>
+                    </div>
+                    <div class="container right">
+                        <div class="content">
+                            <h2>Spring 2026</h2>
+                            <p><i>Go Cats! </i> Alexandria finally graduates college with a Bachelor's in Communications and Mass Media, a Bachelor's in Journalism, a Certificate in Sports Journalism, and a Certificate in Playwriting. She is now cold all the time because she has 2 degrees.</p>
+                        </div>
+                    </div>
+                    <div class="container left">
+                        <div class="content">
+                            <h2>Summer 2026</h2>
+                            <p><i>Probably World Record Pace... </i> Alexandria speedruns adulthood by turning 22, getting a job, getting her license, and getting her passport in the span of a month.</p>
+                        </div>
+                    </div>
+                    <div class="container right">
+                        <div class="content">
+                            <h2>Here's where you come in.. <br/> Wesley and Alexandria get married!!!!! <br/>Do you want to be there? RSVP Below!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="floating" >
+            <div style="display: grid;  place-items: center; justify-content: center;">
+            <h2>Dress Code</h2><br>
+                <h2>Formal Garden Party</h2>
+
+                <h4>LADIES</h4>
+
+                <p>Floor-length gowns, midi or tea-length dresses, and sophisticated dressy separates are all welcome. Floral prints, pastels, elegant patterns and color is welcome and encouraged, whether soft or vibrant. Please consider that this event will be held outdoors.</p>
+
+                <h4>GENTLEMEN</h4>
+
+                <p>Suits or dress pants with a blazer are appropriate, paired with a button-down or dress shirt. Ties are optional. Colors and patterns are also encouraged! Please consider that this event will be held outdoors.</p>
+
+                <h4>NOTE FOR BOTH</h4>
+
+                <p><str>If you are considering wearing white or are questioning whether your attire is too close to white, or have any doubts at all, it’s best to leave it at home!</str></p>
+            <h2>Food and Drink</h2>
+            <p>We will be Catering Qdoba for the reception. Please let us know in the RSVP form of any dietary restrictions.<br/>Alcohol will not be served, and we kindly request you leave yours at home.</p>
+            <h2>Location</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3147.376647784365!2d-85.67233619045797!3d37.921630471831655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x886901be88691ce5%3A0x144bd64c5a4cecf6!2sBernheim%20Forest%20and%20Arboretum!5e0!3m2!1sen!2sus!4v1787068362991!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            </div>
+            
+        </div>
+        <div class="floating">
+            <div style="display: grid;  place-items: center; justify-content: center;">
+                <h2>Want to support us?</h2>
+                <a href="https://www.amazon.com/wedding/share/omerso-2027" target="_blank"><img src="./treasure_chest.png"/></a>
+                <p>Open the Treasure chest and find out how!</p>
+            </div>
+        </div>
+        <div class="floating" style="display: grid; place-items: center;">
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSepvKWi1nIxf9SLPC_VxJLdbMWjC01qhShcmsBRT6iP3zbVmA/viewform?embedded=true" width="700" height="520" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+
+        </div>
+        
+    </body>
+</html>
